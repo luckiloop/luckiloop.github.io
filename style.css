@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body - all text except h1 */
+body {
+  font-family: 'Arial', sans-serif; /* or any modern font you like */
+  color: #f0f0f0;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Hero title */
+.hero h1 {
+  font-family: 'Orbitron', sans-serif; /* futuristic font only for title */
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  color: #e0e0e0;
+  text-shadow: 0 0 10px #e0e0e0 0 0 20px #e0e0e0;
+}
+
+
+/* Header and burger menu */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: hsl(193, 71%, 36%); /* neon accent */
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(12px);
+  position: absolute;
+  top: 60px;
+  left: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0,255,224,0.3);
+}
+
+.nav-menu a {
+  padding: 1rem 2rem;
+  color: hsl(193, 71%, 36%);
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: rgba(0,255,224,0.1);
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+/* Hero section */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  backdrop-filter: brightness(0.6);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  color: #e0e0e0;
+  text-shadow: 0 0 10px hsl(193, 71%, 36%), 0 0 20px hsl(193, 71%, 36%);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  color: #e0e0e0;
+}
+
+/* Content sections */
+.content-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  text-align: center;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+.content-section.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 8px #e0e0e0;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.7);
+  font-size: 0.9rem;
+  border-radius: 12px 12px 0 0;
+  color: #3d9bbb;
+}
+
+/* Hide sections by default */
+.hidden {
+  display: none;
+}
+
+/* Responsive desktop menu */
+@media(min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .nav-menu a {
+    padding: 0 1rem;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
