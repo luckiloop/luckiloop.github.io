@@ -155,5 +155,67 @@ footer {
   }
   .menu-icon {
     display: none;
-  }
+  }/* Episodes grid container */
+.episodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible 3 per row */
+  gap: 1.5rem; /* space between blocks */
+  margin-top: 2rem;
 }
+
+/* Each episode block */
+.episode-card {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid hsl(193, 71%, 36%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,255,224,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,255,224,0.4);
+}
+
+.episode-card h3 {
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-size: 1.3rem;
+}
+
+.episode-card p {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+/* Rock Paper Scissors Game */
+.choices {
+  margin: 20px;
+}
+
+.choices button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: hsl(193, 71%, 36%);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.choices button:hover {
+  background: hsl(193, 71%, 46%);
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #e0e0e0;
+}
+
+}
+
+
