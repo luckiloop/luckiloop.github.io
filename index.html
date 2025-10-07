@@ -14,6 +14,7 @@
       <a href="#" data-target="hero">Home</a>
       <a href="#" data-target="about">About Me</a>
       <a href="#" data-target="radio">Radio Show</a>
+      <a href="#" data-target="game">Play Game</a> 
     </nav>
   </header>
 
@@ -27,27 +28,60 @@
     </section>
 
     <section id="about" class="content-section hidden">
-      <h2>About Me</h2>
+      <h2>About</h2>
       <p>
-         Hello! I'm Sotiria, a second year computer engineering student passionate about technology,
-        science, and music. 
-        I love blending logic with creativity to make something unique.
-        I also have a radio show. Check it out.
+         Hey, I'm Sotiria. I'm about to get into my second year of university at the University of the Aegean, in the Information and Communication Systems Engineering Department. </p> 
+         <p>I've always liked programming and computer systems so I knew this was what I wanted to do.</p>
+         If I'm not at uni or the library, I'll probably be playing music.
+         Or at the radio station.
       
       </p>
     </section>
 
     <section id="radio" class="content-section hidden">
-      <h2>Sotiria's Radio Domain</h2>
+  <h2>Sotiria's Radio Domain</h2>
+  <p>
+    The academic year 2025-2026 completes my first year at Xoros 94.2 radio station.
+    As I move on to my second year, I have plenty of ideas for shows. 
+    So, the main "theme" of my show is basically chit-chat. Local talk, music, tech news, or whatever else sparks my interest that day. 
+    Also, if you have any recommendations, of course I am open to them (you should go to the "contact" section).
+    Every Saturday at 4, I'll keep you company at xoros.samos.aegean.gr (or FM 94.2), starting Saturday the 11th of October.
+    See ya.
+  </p>
+
+  <!-- Episodes grid -->
+  <div class="episodes">
+    <div class="episode-card">
+      <h3>Premiere 11/10/2025</h3>
       <p>
-        This radio show is about local talk, music and tech news, and much more! 
-        So grab a cup of coffee and tune in, every Saturday at 6pm. Sotiria's Digital Domain.
+        The first show of the new academic year 2025-2026!  
+        This episode is an introduction to my show.
       </p>
-    </section>
-  </main>
+    </div>
 
+    <!-- future episodes just copy this block -->
+    <!--
+    <div class="episode-card">
+      <h3>Episode 2</h3>
+      <p>Details about episode 2 go here...</p>
+    </div>
+    -->
+  </div>
+</section>
 
-
-  <script src="script.js"></script>
+     <section id="game" class="content-section hidden">
+  <h2>Wanna play a game?</h2>
+  <div class="choices">
+    <button data-choice="rock">🪨 Rock</button>
+    <button data-choice="paper">📄 Paper</button>
+    <button data-choice="scissors">✂️ Scissors</button>
+  </div>
+  <div class="result" id="result">Make your move!</div>
+</section>
+      
+  
+  </main><script src="script.js"></script>
 </body>
 </html>
+
+
