@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Arial', sans-serif; /* or any modern font you like */
+  font-family: 'Arial', sans-serif;
   color: #f0f0f0;
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -12,7 +12,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Orbitron', sans-serif; /* futuristic font only for title */
+  font-family: 'Orbitron', sans-serif;
   font-size: 4rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
@@ -31,7 +31,7 @@ header {
 .menu-icon {
   font-size: 2rem;
   cursor: pointer;
-  color: hsl(193, 71%, 36%); /* neon accent */
+  color: hsl(193, 71%, 36%);
 }
 
 .nav-menu {
@@ -148,7 +148,7 @@ footer {
 .episodes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible 3 per row */
-  gap: 1.5rem; /* space between blocks */
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -211,3 +211,4 @@ footer {
 
 
 }
+
