@@ -27,6 +27,7 @@ links.forEach(link => {
       targetSection.classList.remove('hidden');
       targetSection.classList.add('show');
     }
+
     navMenu.style.display = 'none';
   });
 });
@@ -42,7 +43,7 @@ links.forEach(link => {
       hero.style.display = 'flex';
       sections.forEach(sec => sec.classList.remove('show'));
       sections.forEach(sec => sec.classList.add('hidden'));
-      footer.style.display = 'block';  // show footer on Home
+      footer.style.display = 'block';  
     } else {
       hero.style.display = 'none';
       sections.forEach(sec => {
@@ -52,10 +53,11 @@ links.forEach(link => {
       const targetSection = document.getElementById(targetId);
       targetSection.classList.remove('hidden');
       targetSection.classList.add('show');
-      footer.style.display = 'none';  // hide footer on other pages
+      footer.style.display = 'none';  
     }
     navMenu.style.display = 'none';
   });
 
 
 });
+
