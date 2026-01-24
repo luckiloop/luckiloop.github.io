@@ -1,10 +1,11 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif; 
   color: #f0f0f0;
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -19,7 +20,6 @@ body {
   color: #e0e0e0;
   text-shadow: 0 0 10px #e0e0e0 0 0 20px #e0e0e0;
 }
-
 header {
   display: flex;
   align-items: center;
@@ -144,14 +144,13 @@ footer {
   }
   .menu-icon {
     display: none;
- 
+  }
 .episodes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible 3 per row */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; 
   margin-top: 2rem;
 }
-
 .episode-card {
   background: rgba(0,0,0,0.7);
   border: 1px solid hsl(193, 71%, 36%);
@@ -204,6 +203,7 @@ footer {
   color: #e0e0e0;
   font-size: 1.3rem;
 }
+
 .projects-card p {
   font-size: 0.95rem;
   color: #d0d0d0;
@@ -211,4 +211,3 @@ footer {
 
 
 }
-
