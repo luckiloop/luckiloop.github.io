@@ -1,11 +1,8 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Body - all text except h1 */
 body {
   font-family: 'Arial', sans-serif; /* or any modern font you like */
   color: #f0f0f0;
@@ -14,7 +11,6 @@ body {
   min-height: 100vh;
 }
 
-/* Hero title */
 .hero h1 {
   font-family: 'Orbitron', sans-serif; /* futuristic font only for title */
   font-size: 4rem;
@@ -24,8 +20,6 @@ body {
   text-shadow: 0 0 10px #e0e0e0 0 0 20px #e0e0e0;
 }
 
-
-/* Header and burger menu */
 header {
   display: flex;
   align-items: center;
@@ -68,7 +62,6 @@ header {
   backdrop-filter: blur(5px);
 }
 
-/* Hero section */
 .hero {
   height: 80vh;
   display: flex;
@@ -94,7 +87,6 @@ header {
   color: #e0e0e0;
 }
 
-/* Content sections */
 .content-section {
   max-width: 700px;
   margin: 2rem auto;
@@ -125,7 +117,6 @@ header {
   color: #e0e0e0;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -135,12 +126,10 @@ footer {
   color: #3d9bbb;
 }
 
-/* Hide sections by default */
 .hidden {
   display: none;
 }
 
-/* Responsive desktop menu */
 @media(min-width: 768px) {
   .nav-menu {
     display: flex !important;
@@ -155,7 +144,7 @@ footer {
   }
   .menu-icon {
     display: none;
-  }/* Episodes grid container */
+ 
 .episodes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible 3 per row */
@@ -163,7 +152,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Each episode block */
 .episode-card {
   background: rgba(0,0,0,0.7);
   border: 1px solid hsl(193, 71%, 36%);
@@ -189,33 +177,37 @@ footer {
   font-size: 0.95rem;
   color: #d0d0d0;
 }
-/* Rock Paper Scissors Game */
-.choices {
-  margin: 20px;
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem auto;
+}
+.projects-card {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid hsl(193, 71%, 36%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,255,224,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%; 
 }
 
-.choices button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: hsl(193, 71%, 36%);
-  color: #fff;
-  transition: background 0.2s ease;
+.projects-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,255,224,0.4);
 }
 
-.choices button:hover {
-  background: hsl(193, 71%, 46%);
-}
-
-.result {
-  margin-top: 30px;
-  font-size: 1.3rem;
+.projects-card h3 {
+  margin-bottom: 0.5rem;
   color: #e0e0e0;
+  font-size: 1.3rem;
+}
+.projects-card p {
+  font-size: 0.95rem;
+  color: #d0d0d0;
 }
 
+
 }
-
-
