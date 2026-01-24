@@ -3,13 +3,10 @@ const navMenu = document.getElementById('nav-menu');
 const links = navMenu.querySelectorAll('a');
 const hero = document.getElementById('hero');
 const sections = document.querySelectorAll('.content-section');
-
-// toggle burger menu
 menuIcon.addEventListener('click', () => {
   navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// show section on menu click
 links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -30,8 +27,6 @@ links.forEach(link => {
       targetSection.classList.remove('hidden');
       targetSection.classList.add('show');
     }
-
-    // hide menu after selection
     navMenu.style.display = 'none';
   });
 });
@@ -59,54 +54,8 @@ links.forEach(link => {
       targetSection.classList.add('show');
       footer.style.display = 'none';  // hide footer on other pages
     }
-
-    // hide menu after selection
     navMenu.style.display = 'none';
   });
-  // Rock Paper Scissors Game
-const gameButtons = document.querySelectorAll("#game .choices button");
-const gameResult = document.getElementById("result");
-
-gameButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    playRPS(button.dataset.choice);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const gameButtons = document.querySelectorAll("#game .choices button");
-  const gameResult = document.getElementById("result");
-
-  gameButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      playRPS(button.dataset.choice);
-    });
-  });
-
-  function playRPS(playerChoice) {
-    const choices = ["rock", "paper", "scissors"];
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
-
-    gameResult.innerText = `Computer chose: ${computerChoice}...`;
-
-    setTimeout(() => {
-      let result;
-      if (playerChoice === computerChoice) {
-        result = `It's a tie! You both chose ${playerChoice}`;
-      } else if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissors" && computerChoice === "paper")
-      ) {
-        result = `You win! ${playerChoice} beats ${computerChoice}`;
-      } else {
-        result = `You lose! ${computerChoice} beats ${playerChoice}`;
-      }
-      gameResult.innerText = result;
-    }, 800);
-  }
-});
 
 
 });
-
