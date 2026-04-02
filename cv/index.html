@@ -48,11 +48,6 @@
     </style>
 </head>
 <body>
-<div class="d-flex justify-content-center my-3">
-  <div class="btn-group" role="group">
-    <button id="btn-en" class="btn btn-outline-dark active" onclick="setLang('en')">EN</button>
-    <button id="btn-gr" class="btn btn-outline-dark" onclick="setLang('gr')">GR</button>
-  </div>
 </div>
     <header class="header-bg text-center shadow">
         <div class="container">
@@ -186,7 +181,11 @@
             </div>
         </div>
     </div>
-
+<div class="d-flex justify-content-center my-3">
+  <div class="btn-group" role="group">
+    <button id="btn-en" class="btn btn-outline-dark active" onclick="setLang('en')">EN</button>
+    <button id="btn-gr" class="btn btn-outline-dark" onclick="setLang('gr')">GR</button>
+  </div>
    <script>
 function setLang(lang) {
   document.querySelectorAll("[data-gr]").forEach(el => {
