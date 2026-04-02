@@ -48,8 +48,12 @@
     </style>
 </head>
 <body>
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('gr')">GR</button>
+<div class="d-flex justify-content-center my-3">
+  <div class="btn-group" role="group">
+    <button id="btn-en" class="btn btn-outline-dark active" onclick="setLang('en')">EN</button>
+    <button id="btn-gr" class="btn btn-outline-dark" onclick="setLang('gr')">GR</button>
+  </div>
+</div>
     <header class="header-bg text-center shadow">
         <div class="container">
             <img src="pfp.JPG" alt="Profile Picture" class="rounded-circle profile-img shadow-sm mb-3">
@@ -183,11 +187,11 @@
         </div>
     </div>
 
-    <script>
+   <script>
 function setLang(lang) {
   document.querySelectorAll("[data-gr]").forEach(el => {
     if (lang === "gr") {
-      el.dataset.en = el.innerHTML; 
+      el.dataset.en = el.innerHTML;
       el.innerHTML = el.dataset.gr;
     } else {
       if (el.dataset.en) {
@@ -195,10 +199,17 @@ function setLang(lang) {
       }
     }
   });
-}
-</script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+  document.getElementById("btn-gr").classList.toggle("active", lang === "gr");
+
+  localStorage.setItem("lang", lang);
+}
+
+window.onload = () => {
+  setLang(localStorage.getItem("lang") || "en");
+};
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
