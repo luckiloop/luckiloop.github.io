@@ -3,102 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sotiria Laki | Personal Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Under Construction</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #3b82f6;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-family: inherit;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.2s;
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    #game {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #target {
+      width: 40px;
+      height: 40px;
+      background: #3b82f6;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    #score, #timer {
+      position: absolute;
+      left: 20px;
+      font-size: 1.2rem;
+    }
+
+    #score { top: 20px; }
+    #timer { top: 50px; }
+
+    #endScreen {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="menu-icon" id="menu-icon">&#9776;</div>
-    <nav class="nav-menu" id="nav-menu">
-      <a href="#" data-target="hero">Home</a>
-      <a href="#" data-target="about">About Me</a>
-      <a href="#" data-target="Projects">Projects</a>
-      <a href="#" data-target="Certificates">Certificates</a> 
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <h1>Sotiria's Digital Domain</h1>
-      <p>Computer Engineering Student & Creative Thinker</p>
-       <footer>
-    <p>© 2026 Sotiria Laki | All rights reserved</p>
-  </footer>
-    </section>
-
-    <section id="about" class="content-section hidden">
-      <h2>About</h2>
-      <p>
-         Hey, I'm Sotiria and I'm in my second year of university at the University of the Aegean, in the Information and Communication Systems Engineering Department. </p> 
-         <p>I chose this school because I've always wanted to do something that includes programming, but when I saw the options I had,
-          ICSD stood out to me, since if I got that degree not only would I be able to program, but I'd do a lot more
-          other things. I mean I'll be a full on engineer in 2 years now. Anyways, I also like music.
-          My first instrument that I started was cello, which I've now been playing for 7 years, which is weird because it's not common for it to be your first intstrument.
-          Then I got into piano since it was mandatory for me to obtain my Diploma in music harmony. Lastly I got a guitar because I've always wanted to play it.
-          But it doesn't stop there, I have a ukulele and play electric bass in my band in university. I mean I'll just play anything I come across at this point.
-      
-      </p>
-    </section>
-
-    <section id="Projects" class="content-section hidden">
-  <h2>Projects</h2>
-  <p>
-     Interesting things I've done the past year. You can take a look in my github for more information.
-  </p>
-    <!-- Episodes grid -->
-  <div class="projects">
-  <div class="projects-card">
-      <h3>Music Player using data structures in C.</h3>
-      <p>I made a Spotify player type thing for a class this semester (2025-2026).
-        You can do a lot of things such as add and delete songs, create playlists, search songs by artist name or title, 
-        see how long songs are, add songs from file, save songs to file, etc.
-        Since it's limited to only c programming, the teacher didn't want us to do anything about the GUI.
-        It doesn't actually have sound. However, it did get me the highest grade.
-      </p>
-    </div>
-
-  <!-- Episodes grid -->
-    <div class="projects-card">
-      <h3>Hotel management system app for receptionists in Java.</h3>
-      <p> This is a fully functioning application for a hotel. It helps digitalize and automate 
-        some of the work of the receptionist and make it easier for them. The worker can add / remove reservations, edit them,
-        add a service to the customer's booking (rent a car etc.), see all reservations and bookings, they can see the total ammount someone had to pay, and it basically does everything that
-        a receptionist would need a system like that to do. For the GUI I used inline CSS Style encoding, while I also use serialization and other functions.
-       
-      </p>
-    </div>
+  <div id="main">
+    <h1>Site Under Construction</h1>
+    <p>ok relax im building something cool</p>
+    <button onclick="startGame()">Tired of waiting? Play minigame</button>
   </div>
-</section>
- <section id="Certificates" class="content-section hidden">
-      <h2>Certificates</h2>
-      <p>
-        Certificates I've gotten from things I've participated in and skills I've learned.
-      </p>
-       <div class="episodes">
-      <div class="episode-card">
-      <h3>Digital Entrepreneurship - Digimpact</h3>
-      <p>Provides me with more knowledge about bussiness, gives me 2 ECTS.</p>
-    </div>
-      <div class="episode-card">
-      <h3>Certificate with proficiency in English, University of Michigan.</h3>
-      <p>Confirms I know the English language and opens new, international doors for me.</p>
-    </div>
-     <div class="episode-card">
-      <h3>ECESCON 16</h3>
-      <p>ECESCON is a well-known conference for electrical and electronics engineers here in Greece.
-        It happens every year in a different part of the country and attracts a lot of students wishing to grow.
-      </p>
-    </div>
-       </div>
-    </section>
 
+  <div id="game">
+    <div id="score">Score: 0</div>
+    <div id="timer">Time: 15</div>
+    <div id="target"></div>
+  </div>
 
-      
-  
-  </main><script src="script.js"></script>
+  <div id="endScreen">
+    <h2 id="finalScore"></h2>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+
+  <script>
+    let score = 0;
+    let time = 15;
+    let gameInterval;
+    let timerInterval;
+
+    const target = document.getElementById('target');
+    const scoreDisplay = document.getElementById('score');
+    const timerDisplay = document.getElementById('timer');
+
+    function startGame() {
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('game').style.display = 'block';
+      score = 0;
+      time = 15;
+      updateDisplays();
+      moveTarget();
+
+      gameInterval = setInterval(moveTarget, 800);
+
+      timerInterval = setInterval(() => {
+        time--;
+        timerDisplay.textContent = 'Time: ' + time;
+        if (time <= 0) endGame();
+      }, 1000);
+    }
+
+    function moveTarget() {
+      const x = Math.random() * (window.innerWidth - 40);
+      const y = Math.random() * (window.innerHeight - 40);
+      target.style.left = x + 'px';
+      target.style.top = y + 'px';
+    }
+
+    target.addEventListener('click', () => {
+      score++;
+      updateDisplays();
+      moveTarget();
+    });
+
+    function updateDisplays() {
+      scoreDisplay.textContent = 'Score: ' + score;
+      timerDisplay.textContent = 'Time: ' + time;
+    }
+
+    function endGame() {
+      clearInterval(gameInterval);
+      clearInterval(timerInterval);
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('endScreen').style.display = 'block';
+      document.getElementById('finalScore').textContent = 'Your score: ' + score;
+    }
+
+    function restartGame() {
+      document.getElementById('endScreen').style.display = 'none';
+      startGame();
+    }
+  </script>
+
 </body>
 </html>
-
-
-
